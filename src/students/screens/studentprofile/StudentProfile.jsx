@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './studentprofile.css'
 import {
   Avatar,
@@ -17,8 +17,7 @@ import { useFetch } from "../../../hooks/useFetch";
 import Loader from "../../../components/loader/Loader";
 import NotFoundData from "../../../components/notFoundData/NotFoundData";
 import loadingImg from "../../../images/Loading-rafiki (1).png";
-import { useEffect } from "react";
-import axios from "axios";
+import { api } from "../../../api/baseUrl";
 
 export default function StudentProfile() {
   const [isEditing, setIsEditing] = useState(false);
@@ -33,7 +32,7 @@ export default function StudentProfile() {
     avatar: ""
   });
   useEffect(() => {
-    if (data) setProfileData(data);
+    if (data && !Array.isArray(data)) setProfileData(data);
   }, [data]);
 
   if (loading) return <Loader />;
@@ -53,12 +52,12 @@ export default function StudentProfile() {
   }
   const handleSave = () => {
     setOpenDialog(false);
-    axios.put("{{base_URL}}/changestudentprofile", profileData)
+    api.put("/changestudentprofile", profileData)
       .then(res => {
         setProfileData(res.data);
         setIsEditing(false);
-        setOpenDialog(false);
-      });
+      })
+      .catch(err => console.error("Failed to update profile", err));
 
 
   };

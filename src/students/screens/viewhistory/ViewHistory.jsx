@@ -1,21 +1,24 @@
-import { useState, useMemo } from "react";
 import { useFetch } from "../../../hooks/useFetch";
 import "./viewhistory.css";
 import Loader from "../../../components/loader/Loader";
+import NotFoundData from "../../../components/notFoundData/NotFoundData";
 import loadingImg from '../../../images/Loading-rafiki (1).png'
 
 export default function ViewHistory() {
 
-  const { data: { total, avg, highest, lowest, passRate, quizzes }, loading, error } = useFetch("viewhistory");
+  const { data, loading, error } = useFetch("viewhistory");
 
   if (loading) return <Loader />;
-  if (error)
+  if (error || !data)
     return (
       <NotFoundData
-        message="Error loading "
+        message="Error loading quiz history"
         imag={loadingImg}
       />
     );
+
+  const { total, avg, highest, lowest, passRate } = data;
+  const quizzes = Array.isArray(data.quizzes) ? data.quizzes : [];
 
   return (
     <div className="history-page">

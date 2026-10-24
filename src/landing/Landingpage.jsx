@@ -6,7 +6,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import Footer from "../components/footer/footer";
+import Footer from "../components/footer/Footer";
 import { useFetch } from "../hooks/useFetch";
 import Loader from "../components/loader/Loader";
 import loadingImg from "../images/Loading-rafiki (1).png";
@@ -32,13 +32,14 @@ export default function LandingPage() {
   const { user } = useSelector((state) => state.auth);
   const { data, loading, error } = useFetch("landingpagedata");
 
-  if (loading) return <Loader />;
-  if (error) return <NotFoundData message="Error loading" imag={loadingImg} />;
-
   const handleLogout = () => {
     dispatch(logout());
     navigate("/");
   };
+
+  if (loading) return <Loader />;
+  if (error || !data)
+    return <NotFoundData message="Error loading" imag={loadingImg} />;
 
   return (
     <Box sx={styles.container}>
@@ -182,7 +183,7 @@ export default function LandingPage() {
 
         <Grid container spacing={4} justifyContent="center">
           {data.categories?.map((cat) => (
-            <Grid item xs={12} sm={6} md={4} key={cat.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={cat.id}>
               <Card sx={styles.card}>
                 <CardContent>
                   <Box sx={{ mb: 2, textAlign: "center" }}>
@@ -232,7 +233,7 @@ export default function LandingPage() {
           Our Stats
         </Typography>
         <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} sm={4}>
+          <Grid size={{ xs: 12, sm: 4 }}>
             <Card sx={styles.statsCard}>
               <FaChalkboardTeacher size={50} color="#2c356A" />
               <Typography variant="h6" fontWeight={600} mt={2}>
@@ -240,7 +241,7 @@ export default function LandingPage() {
               </Typography>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid size={{ xs: 12, sm: 4 }}>
             <Card sx={styles.statsCard}>
               <FaAward size={50} color="#2c356A" />
               <Typography variant="h6" fontWeight={600} mt={2}>
@@ -248,7 +249,7 @@ export default function LandingPage() {
               </Typography>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid size={{ xs: 12, sm: 4 }}>
             <Card sx={styles.statsCard}>
               <FaUsers size={50} color="#2c356A" />
               <Typography variant="h6" fontWeight={600} mt={2}>

@@ -14,7 +14,7 @@ export default function Studentperformance() {
     const { data:stats, loading, error } = useFetch('students/performance');
    if (loading) return <Loader />;
 
-    if (error)
+    if (error || !stats)
         return (
             <NotFoundData
                 message="Error loading students performance"

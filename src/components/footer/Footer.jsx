@@ -6,7 +6,7 @@ const Footer = () => (
     <Container maxWidth="lg">
       <Grid container spacing={4}>
      
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Typography variant="h6" fontWeight={600} mb={2}>
             QuizApp
           </Typography>
@@ -16,7 +16,7 @@ const Footer = () => (
         </Grid>
 
       
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Typography variant="h6" fontWeight={600} mb={2}>
             Quick Links
           </Typography>
@@ -37,7 +37,7 @@ const Footer = () => (
         </Grid>
 
        
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Typography variant="h6" fontWeight={600} mb={2}>
             Follow Us
           </Typography>

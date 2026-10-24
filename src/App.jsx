@@ -1,6 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
 
 // Admin Screens
 import Main from "./admin/screens/main/Main";
@@ -32,7 +30,6 @@ import { AppInitializer } from "./components/appInitializer/AppInitializer";
 
 function App() {
   return (
-    <Provider store={store}>
       <AppInitializer>
       <Routes>
 
@@ -85,7 +82,6 @@ function App() {
 
       </Routes>
       </AppInitializer>
-    </Provider>
   );
 }
 

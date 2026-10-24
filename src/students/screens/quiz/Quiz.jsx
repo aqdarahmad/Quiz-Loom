@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import QuestionCard from "../../components//questionCard/QuestionCard";
+import QuestionCard from "../../components/questionCard/QuestionCard";
 import Timer from "../../components/timer/Timer";
 import { api } from "../../../api/baseUrl";
 import Loader from "../../../components/loader/Loader";
@@ -39,6 +39,7 @@ export default function Quiz() {
   const { subCategory } = location.state || {};
    const { user } = useSelector((state) => state.auth);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [quizId, setQuizId] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
@@ -53,18 +54,21 @@ export default function Quiz() {
       try {
         setLoading(true);
 
-        const res = await api.post("/quiz/start", {
-          studentId:user?.id,
+        setError(null);
+
+        const { data } = await api.post("/quiz/start", {
+          studentId: user?.id,
           subCategoryId: subCategoryId,
           numberOfQuestions: 20,
         });
         if (!mounted) return;
         setQuizId(data.quizId);
-        setQuestions(data.questions);
-        setAnswers(data.answers);
+        setQuestions(data.questions || []);
+        setAnswers(data.answers || []);
         setStartTime(data.startTime);
       } catch (err) {
         console.error(err);
+        if (mounted) setError("Failed to start the quiz. Please try again.");
       } finally {
         if (mounted) setLoading(false);
       }
@@ -86,7 +90,11 @@ export default function Quiz() {
         return [...prev, { id, selectedAnswer: optionIndex }];
       });
 
-      await api.put(`/quiz/${quizId}/answer`, { id, selectedAnswer: optionIndex });
+      try {
+        await api.put(`/quiz/${quizId}/answer`, { id, selectedAnswer: optionIndex });
+      } catch (err) {
+        console.error("Failed to save answer", err);
+      }
     },
     [quizId]
   );
@@ -135,6 +143,10 @@ export default function Quiz() {
       <Container maxWidth="lg" sx={containerStyle}>
         {loading ? (
           <Loader />
+        ) : error ? (
+          <Typography color="error" sx={{ textAlign: "center", mt: 4 }}>
+            {error}
+          </Typography>
         ) : (
           <Stack spacing={3}>
             <Typography variant="h5" sx={headingText}>

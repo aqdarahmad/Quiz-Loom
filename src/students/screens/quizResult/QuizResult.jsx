@@ -33,9 +33,13 @@ export default function QuizResultHorizontal() {
   useEffect(() => {
     if (!result) return;
     let start = 0;
-    const end = result.score;
+    const end = Number(result.score);
+    if (!Number.isFinite(end) || end <= 0) {
+      setAnimatedScore(Number.isFinite(end) ? end : 0);
+      return;
+    }
     const duration = 1000;
-    const stepTime = Math.abs(Math.floor(duration / end));
+    const stepTime = Math.max(Math.floor(duration / end), 10);
     const timer = setInterval(() => {
       start += 1;
       if (start > end) clearInterval(timer);

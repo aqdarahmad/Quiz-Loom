@@ -54,7 +54,6 @@ const QuestionEditor = () => {
   // handle saving the question (add or update)
   const handleSaveQuestion = async () => {
     if (!validateQuestion(question, questions, dispatch, showAlert)) return;
-  console.log(question);
     try {
       if (question?.id) {
         const res = await api.put(`/questions/${question.id}`, question);

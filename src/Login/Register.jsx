@@ -3,7 +3,7 @@ import { Box, Paper, Typography, TextField, Button } from "@mui/material";
 import { Style } from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../Slices/authSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function StudentRegister() {
   const navigate = useNavigate();
@@ -51,11 +51,11 @@ export default function StudentRegister() {
           )}
 
 
-          {user && <Typography color="primary" sx={{ mt: 1 }}>{user.name} {user.role === "admin" && "(Admin)"}</Typography>}
+          {user && <Typography color="primary" sx={{ mt: 1 }}>{user.username} {user.role === "admin" && "(Admin)"}</Typography>}
         </form>
 
         <Typography variant="body2" sx={{ mt: 3 }}>
-          Already have an account? <a href="/login" style={{ color: "#2c356A" }}>Login</a>
+          Already have an account? <Link to="/login" style={{ color: "#2c356A" }}>Login</Link>
         </Typography>
       </Paper>
     </Box>

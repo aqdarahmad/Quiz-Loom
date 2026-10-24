@@ -42,7 +42,6 @@ const SubCategoriesItem = ({ data, onDelete }) => {
   const handleCloseDialog = () => setOpenDialog(false);
 
   const handleConfirmStart = () => {
-    console.log("Test started!");
     setOpenDialog(false);
     navigate(`/student/quiz/${data.id}`, { state: { subCategory: data } });
   };

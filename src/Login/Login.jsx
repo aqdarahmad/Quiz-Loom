@@ -20,10 +20,10 @@ export default function StudentLogin() {
     e.preventDefault();
     dispatch(loginUser(formData)).then((res) => {
       if (res.meta.requestStatus === "fulfilled") {
-        const { user } = res.payload;
-        if (user.role === "student") {
+        const user = res.payload?.user;
+        if (user?.role === "student") {
           navigate("/student");
-        } else if (user.role === "admin") {
+        } else if (user?.role === "admin") {
           navigate("/admin");
         }
       }

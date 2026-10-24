@@ -11,12 +11,17 @@ export function AppInitializer({ children }) {
     const storedToken = localStorage.getItem("token");
 
     if (storedUser && storedToken) {
-      dispatch(
-        setUserFromStorage({
-          user: JSON.parse(storedUser),
-          token: storedToken,
-        })
-      );
+      try {
+        dispatch(
+          setUserFromStorage({
+            user: JSON.parse(storedUser),
+            token: storedToken,
+          })
+        );
+      } catch {
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+      }
     }
     setInitialized(true);
   }, [dispatch]);

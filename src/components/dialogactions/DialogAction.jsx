@@ -13,7 +13,6 @@ export default function DialogAction({ student, iconSize = 20 }) {
     setLoading(true);
     try {
       const res = await api.get(`/students/${student.student_id}`);
-      console.log(res.data);
       setDetails(res.data);
     } catch (err) {
       console.error('Failed to fetch student details', err);

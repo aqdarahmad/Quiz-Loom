@@ -24,9 +24,9 @@ import {
 } from "./QuestionBank.styles";
 
 export default function QuestionBank() {
-  const { QuestionBankId } = useParams();
+  const { questionBankId } = useParams();
   const { data, loading, error } = useFetch(
-    `questionBanks?subcategoryId=${QuestionBankId}`
+    `questionBanks?subcategoryId=${questionBankId}`
   );
 
   const { search, type, setSearch, setType, filterItems } = useSearchFilter();
@@ -35,10 +35,7 @@ export default function QuestionBank() {
     { value: QUESTION_TYPES.MCQ, label: "Multiple Choice" },
   ];
 
-  const filteredQuestions = React.useMemo(() => {
-    if (!data?.questions) return [];
-    return filterItems(data.questions);
-  }, [data?.questions, search, type]);
+  const filteredQuestions = data?.questions ? filterItems(data.questions) : [];
 
   const sidebarStats = {
     title: "Total Questions",
