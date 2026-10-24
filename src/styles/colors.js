@@ -4,6 +4,6 @@ export const COLORS = {
   secondary: "#fde4ec", // soft pink
   accent: "#e87ca3", // pink
   accentLight: "#f4a7c0",
-  black: "#1a1a1a",
+  dark: "#2b1118",
   white: "#ffffff",
 };

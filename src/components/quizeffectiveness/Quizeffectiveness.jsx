@@ -38,9 +38,9 @@ export default function Quizeffectiveness() {
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="Easy" stackId="a" fill="#e87ca3" />
+                        <Bar dataKey="Easy" stackId="a" fill="#f4a7c0" />
                         <Bar dataKey="Medium" stackId="a" fill="#e87ca3" />
-                        <Bar dataKey="Hard" stackId="a" fill="#1a1a1a" />
+                        <Bar dataKey="Hard" stackId="a" fill="#5a1530" />
                         <Bar dataKey="Completion" fill="#7a1f3d" barSize={30} />
                     </BarChart>
                 </ResponsiveContainer>

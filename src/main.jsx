@@ -9,9 +9,9 @@ import { store } from './redux/store';
 const theme = createTheme({
   palette: {
     primary: { main: '#7a1f3d', dark: '#5a1530', contrastText: '#ffffff' },
-    secondary: { main: '#e87ca3', contrastText: '#1a1a1a' },
+    secondary: { main: '#e87ca3', contrastText: '#2b1118' },
     background: { default: '#fff5f8' },
-    text: { primary: '#1a1a1a' },
+    text: { primary: '#2b1118' },
   },
 });
 

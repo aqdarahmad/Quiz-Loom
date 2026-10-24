@@ -28,3 +28,7 @@ npm run dev              # Vite on http://localhost:5173 (proxies /api to the AP
 - Build: `npm install && npm run build` · Start: `npm start`
 - Env vars: `DATABASE_URL`, `JWT_SECRET`, `ADMIN_USERNAME`, `ADMIN_PASSWORD` (see `render.yaml`)
 - Sign up creates students; the admin account is created from `ADMIN_USERNAME`/`ADMIN_PASSWORD`.
+
+**Sample content & demo data**
+- On first start the database is filled with 3 categories, 9 quizzes and 90 questions.
+- For screenshots, `npm run seed:demo` adds 12 demo students with quiz history (password `Demo@12345`); `npm run seed:demo:remove` deletes them. Both use `DATABASE_URL`.

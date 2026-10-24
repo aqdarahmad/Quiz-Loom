@@ -6,7 +6,7 @@ export const styles = {
   },
   heroSection: {
     minHeight: "60vh",
-    background: "#1a1a1a",
+    background: "linear-gradient(135deg, #5a1530 0%, #7a1f3d 55%, #b23a65 100%)",
     color: "#fde4ec",
     display: "flex",
     flexDirection: "column",

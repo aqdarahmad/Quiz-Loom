@@ -2,7 +2,7 @@ import { Box, Container, Typography, Grid, Link, IconButton } from "@mui/materia
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => (
-  <Box sx={{ backgroundColor: "#1a1a1a", color: "#fde4ec", mt: 5, py: 6 }}>
+  <Box sx={{ backgroundColor: "#5a1530", color: "#fde4ec", mt: 5, py: 6 }}>
     <Container maxWidth="lg">
       <Grid container spacing={4}>
      

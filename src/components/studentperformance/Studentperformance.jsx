@@ -26,7 +26,7 @@ export default function Studentperformance() {
         datasets: [{
             label: 'Pass vs Fail',
             data: [stats.passRate || 0, stats.failRate || 0],
-            backgroundColor: ['#e87ca3', '#1a1a1a'],
+            backgroundColor: ['#f4a7c0', '#7a1f3d'],
         }]
     };
 
@@ -35,7 +35,7 @@ export default function Studentperformance() {
         datasets: [{
             label: 'Students Count',
             data: [stats.motivatedStudents || 0, stats.weakStudents || 0],
-            backgroundColor: ['#e87ca3', '#1a1a1a']
+            backgroundColor: ['#f4a7c0', '#7a1f3d']
         }]
     };
 
