@@ -25,7 +25,7 @@ export default function StudentRegister() {
     e.preventDefault();
     dispatch(registerUser(formData)).then((res) => {
       if (res.meta.requestStatus === "fulfilled") {
-        navigate("/login");
+        navigate("/student");
       }
     });
   };

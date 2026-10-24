@@ -19,6 +19,8 @@ import {
   FaBook,
   FaBrain,
   FaGraduationCap,
+  FaLaptopCode,
+  FaFlask,
 } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../Slices/authSlice";
@@ -189,6 +191,12 @@ export default function LandingPage() {
                   <Box sx={{ mb: 2, textAlign: "center" }}>
                     {cat.name === "Math" && (
                       <FaBrain size={50} color="#2c356A" />
+                    )}
+                    {cat.name === "Programming" && (
+                      <FaLaptopCode size={50} color="#2c356A" />
+                    )}
+                    {cat.name === "Chemistry" && (
+                      <FaFlask size={50} color="#2c356A" />
                     )}
                     {cat.name === "Science" && (
                       <FaBook size={50} color="#2c356A" />
