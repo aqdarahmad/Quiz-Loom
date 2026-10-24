@@ -2,7 +2,7 @@ import { Box, Container, Typography, Grid, Link, IconButton } from "@mui/materia
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => (
-  <Box sx={{ backgroundColor: "#0c164dff", color: "#EEE8df", mt: 5, py: 6 }}>
+  <Box sx={{ backgroundColor: "#1a1a1a", color: "#fde4ec", mt: 5, py: 6 }}>
     <Container maxWidth="lg">
       <Grid container spacing={4}>
      
@@ -21,16 +21,16 @@ const Footer = () => (
             Quick Links
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <Link href="#" color="#EEE8df" underline="hover" sx={{ mb: 0.5 }}>
+            <Link href="#" color="#fde4ec" underline="hover" sx={{ mb: 0.5 }}>
               Home
             </Link>
-            <Link href="#" color="#EEE8df" underline="hover" sx={{ mb: 0.5 }}>
+            <Link href="#" color="#fde4ec" underline="hover" sx={{ mb: 0.5 }}>
               Quizzes
             </Link>
-            <Link href="#" color="#EEE8df" underline="hover" sx={{ mb: 0.5 }}>
+            <Link href="#" color="#fde4ec" underline="hover" sx={{ mb: 0.5 }}>
               History
             </Link>
-            <Link href="#" color="#EEE8df" underline="hover">
+            <Link href="#" color="#fde4ec" underline="hover">
               Contact
             </Link>
           </Box>
@@ -42,13 +42,13 @@ const Footer = () => (
             Follow Us
           </Typography>
           <Box>
-            <IconButton href="#" sx={{ color: "#EEE8df" }}>
+            <IconButton href="#" sx={{ color: "#fde4ec" }}>
               <FaFacebookF />
             </IconButton>
-            <IconButton href="#" sx={{ color: "#EEE8df" }}>
+            <IconButton href="#" sx={{ color: "#fde4ec" }}>
               <FaTwitter />
             </IconButton>
-            <IconButton href="#" sx={{ color: "#EEE8df" }}>
+            <IconButton href="#" sx={{ color: "#fde4ec" }}>
               <FaInstagram />
             </IconButton>
           </Box>

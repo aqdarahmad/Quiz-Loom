@@ -38,10 +38,10 @@ export default function Quizeffectiveness() {
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="Easy" stackId="a" fill="#82ca9d" />
-                        <Bar dataKey="Medium" stackId="a" fill="#8884d8" />
-                        <Bar dataKey="Hard" stackId="a" fill="#ff7300" />
-                        <Bar dataKey="Completion" fill="#2c356A" barSize={30} />
+                        <Bar dataKey="Easy" stackId="a" fill="#e87ca3" />
+                        <Bar dataKey="Medium" stackId="a" fill="#e87ca3" />
+                        <Bar dataKey="Hard" stackId="a" fill="#1a1a1a" />
+                        <Bar dataKey="Completion" fill="#7a1f3d" barSize={30} />
                     </BarChart>
                 </ResponsiveContainer>
             ) : (

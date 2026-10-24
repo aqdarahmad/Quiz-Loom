@@ -10,10 +10,10 @@ export const style = {
     textTransform: "none",
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
     transition: "all 0.3s ease",
-    bgcolor: "#15135aff",
+    bgcolor: "#1a1a1a",
     color: "#fff",
     "&:hover": {
-      backgroundColor: "#302c9dff",
+      backgroundColor: "#7a1f3d",
       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
       transform: "translateY(-2px)",
     },

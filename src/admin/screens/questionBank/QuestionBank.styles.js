@@ -9,10 +9,10 @@ export const pageWrapper = {
 export const titleStyle = {
    fontWeight: 600,
   textAlign: "center",
-  color: "#2c356A",
+  color: "#7a1f3d",
   fontSize: 24,
   marginBottom: 12,
-  borderBottom: "2px solid #2c356A",
+  borderBottom: "2px solid #7a1f3d",
   paddingBottom: 6,
   width: "100%", 
 };

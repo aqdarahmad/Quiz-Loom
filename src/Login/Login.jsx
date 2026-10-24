@@ -79,7 +79,7 @@ export default function StudentLogin() {
 
         <Typography variant="body2" sx={{ mt: 3 }}>
           New Account?{" "}
-          <Link to="/register" style={{ color: "#2c356A" }}>
+          <Link to="/register" style={{ color: "#7a1f3d" }}>
             Sign Up
           </Link>
         </Typography>

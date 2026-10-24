@@ -55,7 +55,7 @@ export default function StudentRegister() {
         </form>
 
         <Typography variant="body2" sx={{ mt: 3 }}>
-          Already have an account? <Link to="/login" style={{ color: "#2c356A" }}>Login</Link>
+          Already have an account? <Link to="/login" style={{ color: "#7a1f3d" }}>Login</Link>
         </Typography>
       </Paper>
     </Box>

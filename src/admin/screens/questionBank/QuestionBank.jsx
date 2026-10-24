@@ -40,7 +40,7 @@ export default function QuestionBank() {
   const sidebarStats = {
     title: "Total Questions",
     value: data?.questions?.length || 0,
-    bgcolor: "#3f19ca",
+    bgcolor: "#7a1f3d",
     color: "#fff",
   };
 

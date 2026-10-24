@@ -47,8 +47,8 @@ export const deleteButtonStyles = {
 };
 
 export const studentButtonStyles = {
-  bgcolor: "#ff9800",
+  bgcolor: "#e87ca3",
   color: "#fff",
   fontWeight: "bold",
-  "&:hover": { bgcolor: "#d5921dff" },
+  "&:hover": { bgcolor: "#d4628c" },
 };

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-const StatCard = ({ title, value, bgcolor = "#3f19ca", color = "#fff" }) => {
+const StatCard = ({ title, value, bgcolor = "#7a1f3d", color = "#fff" }) => {
   return (
     <Box
       sx={{

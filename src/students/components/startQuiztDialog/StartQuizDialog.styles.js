@@ -71,6 +71,6 @@ export const startButton = {
   fontWeight: 600,
   fontSize: 15,
   bgcolor: COLORS.primary,
-  "&:hover": { bgcolor: "#1976d2" },
+  "&:hover": { bgcolor: "#7a1f3d" },
   px: 3,
 };

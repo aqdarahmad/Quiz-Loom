@@ -25,11 +25,11 @@ const FilterBar = ({ value, onChange, onClear, options }) => {
           gap: 1,
           borderRadius: 2,
           padding: "4px 12px",
-          backgroundColor: "#e3f2fd",
+          backgroundColor: "#fde4ec",
         }}
       >
-        <FilterIcon sx={{ color: "#1976d2" }} />
-        <Typography variant="body2" sx={{ color: "#1976d2", fontWeight: 500 }}>
+        <FilterIcon sx={{ color: "#7a1f3d" }} />
+        <Typography variant="body2" sx={{ color: "#7a1f3d", fontWeight: 500 }}>
           Filter by type:
         </Typography>
 
@@ -74,10 +74,10 @@ const FilterBar = ({ value, onChange, onClear, options }) => {
           onDelete={onClear}
           deleteIcon={<ClearIcon fontSize="small" />}
           sx={{
-            borderColor: "#1976d2",
-            color: "#1976d2",
+            borderColor: "#7a1f3d",
+            color: "#7a1f3d",
             "&:hover": {
-              backgroundColor: "#e3f2fd",
+              backgroundColor: "#fde4ec",
             },
           }}
         />

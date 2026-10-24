@@ -121,7 +121,7 @@ export default function LandingPage() {
                 variant="h5"
                 sx={{
                   textAlign: "center",
-                  color: "#fff5daff",
+                  color: "#fde4ec",
                   fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
                 }}
               >
@@ -169,14 +169,14 @@ export default function LandingPage() {
         </Box>
       </Box>
 
-      <Box sx={{ py: 10, px: 2, backgroundColor: "#f5f5f5" }}>
+      <Box sx={{ py: 10, px: 2, backgroundColor: "#fff5f8" }}>
         <Typography
           variant="h4"
           fontWeight={700}
           sx={{
             textAlign: "center",
             mb: 6,
-            color: "#2c356A",
+            color: "#7a1f3d",
             fontSize: { xs: "1.3rem", sm: "1.7rem", md: "2rem" },
           }}
         >
@@ -190,19 +190,19 @@ export default function LandingPage() {
                 <CardContent>
                   <Box sx={{ mb: 2, textAlign: "center" }}>
                     {cat.name === "Math" && (
-                      <FaBrain size={50} color="#2c356A" />
+                      <FaBrain size={50} color="#7a1f3d" />
                     )}
                     {cat.name === "Programming" && (
-                      <FaLaptopCode size={50} color="#2c356A" />
+                      <FaLaptopCode size={50} color="#7a1f3d" />
                     )}
                     {cat.name === "Chemistry" && (
-                      <FaFlask size={50} color="#2c356A" />
+                      <FaFlask size={50} color="#7a1f3d" />
                     )}
                     {cat.name === "Science" && (
-                      <FaBook size={50} color="#2c356A" />
+                      <FaBook size={50} color="#7a1f3d" />
                     )}
                     {cat.name === "History" && (
-                      <FaGraduationCap size={50} color="#2c356A" />
+                      <FaGraduationCap size={50} color="#7a1f3d" />
                     )}
                   </Box>
                   <Typography
@@ -234,7 +234,7 @@ export default function LandingPage() {
             textAlign: "center",
             mt: 10,
             mb: 6,
-            color: "#2c356A",
+            color: "#7a1f3d",
             fontSize: { xs: "1.3rem", sm: "1.7rem", md: "2rem" },
           }}
         >
@@ -243,7 +243,7 @@ export default function LandingPage() {
         <Grid container spacing={4} justifyContent="center">
           <Grid size={{ xs: 12, sm: 4 }}>
             <Card sx={styles.statsCard}>
-              <FaChalkboardTeacher size={50} color="#2c356A" />
+              <FaChalkboardTeacher size={50} color="#7a1f3d" />
               <Typography variant="h6" fontWeight={600} mt={2}>
                 150+ Courses
               </Typography>
@@ -251,7 +251,7 @@ export default function LandingPage() {
           </Grid>
           <Grid size={{ xs: 12, sm: 4 }}>
             <Card sx={styles.statsCard}>
-              <FaAward size={50} color="#2c356A" />
+              <FaAward size={50} color="#7a1f3d" />
               <Typography variant="h6" fontWeight={600} mt={2}>
                 500+ Quizzes
               </Typography>
@@ -259,7 +259,7 @@ export default function LandingPage() {
           </Grid>
           <Grid size={{ xs: 12, sm: 4 }}>
             <Card sx={styles.statsCard}>
-              <FaUsers size={50} color="#2c356A" />
+              <FaUsers size={50} color="#7a1f3d" />
               <Typography variant="h6" fontWeight={600} mt={2}>
                 2k+ Students
               </Typography>

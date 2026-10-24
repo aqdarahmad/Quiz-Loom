@@ -1,7 +1,7 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 import { Paper, Typography, Divider, Box } from "@mui/material";
 
-const COLORS = ["#544cafff", "#c530d6ff"];
+const COLORS = ["#7a1f3d", "#f4a7c0"];
 
 export default function HalfCircleChart({ data = [], title = "Question Types" }) {
   const chartData = data.map((item, index) => ({

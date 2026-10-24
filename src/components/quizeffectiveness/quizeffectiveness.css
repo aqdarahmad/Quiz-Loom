@@ -13,7 +13,7 @@
 
 .quiz-title {
   text-align: center;
-  color: #2c356A;
+  color: #7a1f3d;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -21,6 +21,6 @@
 
 .no-quizzes {
   text-align: center;
-  color: #2c356A;
+  color: #7a1f3d;
   margin-top: 30px;
 }

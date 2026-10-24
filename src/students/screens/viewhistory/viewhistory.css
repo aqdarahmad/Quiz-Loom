@@ -1,10 +1,10 @@
 :root {
-  --primary: #2c356a;
-  --secondary: #eee8df;
+  --primary: #7a1f3d;
+  --secondary: #fde4ec;
   --high: #4caf50;
   --medium: #ffb300;
   --low: #e53935;
-  --bg: #f5f5f5;
+  --bg: #fff5f8;
 }
 
 body {
